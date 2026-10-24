@@ -1,0 +1,56 @@
+{
+  "categories": [
+    {
+      "id": "backend",
+      "name": "Linguagens & Backend",
+      "items": [
+        "Java",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Rust"
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "Banco de Dados",
+      "items": [
+        "Microsoft SQL Server",
+        "MySQL"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend & Web",
+      "items": [
+        "React",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "HTML"
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "Infraestrutura & DevOps",
+      "items": [
+        "Linux",
+        "Docker",
+        "Git",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Outros Tópicos",
+      "items": [
+        "Makefile",
+        "TSQL",
+        "XSLT",
+        "Kotlin",
+        "Shell"
+      ]
+    }
+  ],
+  "updatedAt": "2026-10-24T20:40:39.786Z"
+}

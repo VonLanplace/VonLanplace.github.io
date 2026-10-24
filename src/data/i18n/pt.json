@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "title": "Lucas Sartorelli (VonLanplace) — Java Júnior Dev & Estudante de ADS na FATEC",
+    "description": "Estudando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste. Focado em Java, OOP, Clean Code, Linux e FOSS.",
+    "viewProjects": "Ver Projetos do GitHub",
+    "contactMe": "Entre em Contato",
+    "viewResume": "Currículo"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "content": "Sou um desenvolvedor júnior cursando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste em São Paulo. Apaixonado por desenvolvimento backend em Java, arquitetura orientada a objetos (OOP) e princípios de Clean Code. Sou um entusiasta de sistemas Linux e software livre (FOSS)."
+  },
+  "experience": {
+    "title": "Formação & Experiência",
+    "jobs": [
+      {
+        "role": "Estudante de Análise e Desenvolvimento de Sistemas",
+        "company": "FATEC Zona Leste",
+        "period": "Cursando (Semestre 4/6)",
+        "description": "Formação superior focada em engenharia de software, POO, banco de dados e sistemas corporativos em Java."
+      },
+      {
+        "role": "Desenvolvedor Backend em Formação",
+        "company": "Projetos Pessoais & Prática em Linux",
+        "period": "2021 - Presente",
+        "description": "Desenvolvimento de aplicações robustas em Java, automações shell em ambientes Linux e estudos avançados de FOSS."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades Técnicas"
+  },
+  "projects": {
+    "title": "Projetos do GitHub (VonLanplace)",
+    "subtitle": "Repositórios públicos obtidos dinamicamente da API do GitHub",
+    "loading": "Carregando repositórios...",
+    "error": "Erro ao carregar repositórios do GitHub.",
+    "stars": "Stars",
+    "forks": "Forks",
+    "noRepos": "Nenhum repositório encontrado.",
+    "viewRepo": "Ver Repositório"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos trabalhar juntos ou trocar ideias?",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "resume": "Currículo"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

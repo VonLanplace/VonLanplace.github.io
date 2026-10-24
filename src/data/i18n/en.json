@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Lucas Sartorelli (VonLanplace) — Java Junior Dev & Software Engineering Student",
+    "description": "Studying Systems Analysis and Development at FATEC Zona Leste. Focused on Java, OOP, Clean Code, Linux, and FOSS.",
+    "viewProjects": "View GitHub Projects",
+    "contactMe": "Contact Me",
+    "viewResume": "Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I am a junior developer currently studying Systems Analysis and Development at FATEC Zona Leste in São Paulo. Passionate about Java backend development, object-oriented programming (OOP), and Clean Code principles. I am a strong advocate for Linux environments and Free and Open Source Software (FOSS)."
+  },
+  "experience": {
+    "title": "Education & Experience",
+    "jobs": [
+      {
+        "role": "Systems Analysis & Development Student",
+        "company": "FATEC Zona Leste",
+        "period": "In Progress (Semester 4/6)",
+        "description": "Higher education focused on software engineering, OOP, databases, and enterprise Java systems."
+      },
+      {
+        "role": "Junior Backend Developer",
+        "company": "Personal Projects & Linux Practice",
+        "period": "2021 - Present",
+        "description": "Developing robust Java applications, Linux shell automation, and advanced FOSS studies."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills"
+  },
+  "projects": {
+    "title": "GitHub Projects (VonLanplace)",
+    "subtitle": "Public repositories dynamically fetched from the GitHub API",
+    "loading": "Loading repositories...",
+    "error": "Failed to load GitHub repositories.",
+    "stars": "Stars",
+    "forks": "Forks",
+    "noRepos": "No repositories found.",
+    "viewRepo": "View Repository"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's build something together or discuss ideas?",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "resume": "Resume"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

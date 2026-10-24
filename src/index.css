@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ef-bg: #fdf6e3;
+    --ef-surface: #f3efd4;
+    --ef-surface-hover: #e8e2be;
+    --ef-text: #5c6a72;
+    --ef-muted: #829181;
+    --ef-border: #dfd7af;
+    --ef-accent: #93b259;
+  }
+
+  .dark {
+    --ef-bg: #2b3339;
+    --ef-surface: #323d43;
+    --ef-surface-hover: #3a464c;
+    --ef-text: #d3c6aa;
+    --ef-muted: #9da9a0;
+    --ef-border: #475258;
+    --ef-accent: #a7c080;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--ef-bg);
+    color: var(--ef-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--ef-bg);
+    color: var(--ef-text);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ef-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ef-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ef-muted);
+}
