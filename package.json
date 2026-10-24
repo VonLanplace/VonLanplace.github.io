@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "npm run extract-skills && npm run extract-contributions && tsc && vite build",
+    "build": "npm run extract-skills && npm run extract-contributions && tsc && vite build && touch dist/.nojekyll",
     "preview": "vite preview",
     "start:preview": "npm run build && vite preview",
     "extract-skills": "node scripts/extract-skills.js",

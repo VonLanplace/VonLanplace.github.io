@@ -3,7 +3,7 @@
 ## Overview
 - Project: Curriculum / Portfolio website (`siteCuriculo`).
 - Owner: **VonLanplace** (GitHub: `VonLanplace`).
-- Hosting: GitHub Pages.
+- Hosting: GitHub Pages ([https://VonLanplace.github.io](https://VonLanplace.github.io)).
 - Tech Stack: TypeScript, JSON-driven data storage (resume, profile, and multi-language i18n).
 
 ## Architecture & Data
