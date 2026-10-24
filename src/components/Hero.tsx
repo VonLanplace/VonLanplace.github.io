@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowRight, Terminal, FileText } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import personal from '../data/personal.json';
 
@@ -13,16 +13,11 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="relative pt-20 pb-32 overflow-hidden bg-[var(--ef-bg)] transition-colors duration-300">
+    <section id="hero" className="relative pt-24 pb-32 overflow-hidden bg-[var(--ef-bg)] transition-colors duration-300">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[var(--ef-accent)]/10 via-transparent to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[var(--ef-surface)] border border-[var(--ef-border)] text-[var(--ef-accent)] text-sm font-medium mb-6 shadow-sm">
-            <Terminal className="w-4 h-4" />
-            <span>Lucas Sartorelli • Everforest Theme</span>
-          </div>
-
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[var(--ef-text)] mb-6">
             {t.hero.greeting}{' '}
             <span className="text-[var(--ef-accent)]">

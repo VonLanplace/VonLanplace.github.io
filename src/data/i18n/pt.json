@@ -24,13 +24,13 @@
       {
         "role": "Estudante de Análise e Desenvolvimento de Sistemas",
         "company": "FATEC Zona Leste",
-        "period": "Cursando (Semestre 4/6)",
+        "period": "2023 - Presente",
         "description": "Formação superior focada em engenharia de software, POO, banco de dados e sistemas corporativos em Java."
       },
       {
         "role": "Desenvolvedor Backend em Formação",
         "company": "Projetos Pessoais & Prática em Linux",
-        "period": "2021 - Presente",
+        "period": "2024 - Presente",
         "description": "Desenvolvimento de aplicações robustas em Java, automações shell em ambientes Linux e estudos avançados de FOSS."
       }
     ]
@@ -47,6 +47,11 @@
     "forks": "Forks",
     "noRepos": "Nenhum repositório encontrado.",
     "viewRepo": "Ver Repositório"
+  },
+  "contributions": {
+    "title": "Projetos Contribuídos",
+    "subtitle": "Repositórios externos e colaborações open source onde atuei",
+    "noRepos": "Nenhuma contribuição externa recente encontrada."
   },
   "contact": {
     "title": "Contato",

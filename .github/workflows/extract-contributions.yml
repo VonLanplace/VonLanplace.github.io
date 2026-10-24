@@ -1,0 +1,33 @@
+name: Extract GitHub Contributions
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at midnight
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Extract Contributions
+        run: npm run extract-contributions
+
+      - name: Commit and push changes if any
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/contributions.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update extracted GitHub contributions [skip ci]" && git push)

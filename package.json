@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "npm run extract-skills && tsc && vite build",
+    "build": "npm run extract-skills && npm run extract-contributions && tsc && vite build",
     "preview": "vite preview",
     "start:preview": "npm run build && vite preview",
-    "extract-skills": "node scripts/extract-skills.js"
+    "extract-skills": "node scripts/extract-skills.js",
+    "extract-contributions": "node scripts/extract-contributions.js"
   },
   "dependencies": {
     "lucide-react": "^1.16.0",

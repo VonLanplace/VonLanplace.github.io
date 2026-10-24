@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { GitHubRepo } from '../types';
 import { fetchUserRepos } from '../services/github';
-import { GitBranch, Star, ExternalLink, RefreshCw, FolderGit2, ChevronLeft, ChevronRight, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
+import { GitBranch, Star, ExternalLink, RefreshCw, FolderGit2, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 export const Projects: React.FC = () => {
   const { t } = useLanguage();
@@ -109,15 +109,11 @@ export const Projects: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[var(--ef-accent)]/10 border border-[var(--ef-accent)]/20 text-[var(--ef-accent)] text-xs font-semibold mb-4">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Everforest Carousel</span>
-            </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--ef-text)] mb-3">
               {t.projects.title}
             </h2>
             <p className="text-[var(--ef-muted)] text-base max-w-xl">
-              {t.projects.subtitle} ({repos.length} repositories)
+              {t.projects.subtitle}
             </p>
           </div>
 

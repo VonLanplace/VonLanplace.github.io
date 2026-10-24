@@ -24,13 +24,13 @@
       {
         "role": "Systems Analysis & Development Student",
         "company": "FATEC Zona Leste",
-        "period": "In Progress (Semester 4/6)",
+        "period": "2023 - Present",
         "description": "Higher education focused on software engineering, OOP, databases, and enterprise Java systems."
       },
       {
         "role": "Junior Backend Developer",
         "company": "Personal Projects & Linux Practice",
-        "period": "2021 - Present",
+        "period": "2024 - Present",
         "description": "Developing robust Java applications, Linux shell automation, and advanced FOSS studies."
       }
     ]
@@ -47,6 +47,11 @@
     "forks": "Forks",
     "noRepos": "No repositories found.",
     "viewRepo": "View Repository"
+  },
+  "contributions": {
+    "title": "Contributed Projects",
+    "subtitle": "External repositories and open source collaborations",
+    "noRepos": "No recent external contributions found."
   },
   "contact": {
     "title": "Contact",
