@@ -1,26 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-ef-bg: rgb(var(--ef-bg-rgb));
+  --color-ef-surface: rgb(var(--ef-surface-rgb));
+  --color-ef-surface-hover: rgb(var(--ef-surface-hover-rgb));
+  --color-ef-text: rgb(var(--ef-text-rgb));
+  --color-ef-muted: rgb(var(--ef-muted-rgb));
+  --color-ef-border: rgb(var(--ef-border-rgb));
+  --color-ef-accent: rgb(var(--ef-accent-rgb));
+  --color-ef-accent-ink: rgb(var(--ef-accent-ink-rgb));
+  --color-ef-green: rgb(var(--ef-green-rgb));
+  --color-ef-aqua: rgb(var(--ef-aqua-rgb));
+  --color-ef-yellow: rgb(var(--ef-yellow-rgb));
+  --color-ef-red: rgb(var(--ef-red-rgb));
+  --color-ef-purple: rgb(var(--ef-purple-rgb));
+}
 
 @layer base {
   :root {
-    --ef-bg: #fdf6e3;
-    --ef-surface: #f3efd4;
-    --ef-surface-hover: #e8e2be;
-    --ef-text: #5c6a72;
-    --ef-muted: #829181;
-    --ef-border: #dfd7af;
-    --ef-accent: #93b259;
+    --ef-bg-rgb: 253 246 227;
+    --ef-surface-rgb: 243 239 212;
+    --ef-surface-hover-rgb: 232 226 190;
+    --ef-text-rgb: 92 106 114;
+    --ef-muted-rgb: 130 145 129;
+    --ef-border-rgb: 223 215 175;
+    --ef-accent-rgb: 147 178 89;
+    --ef-accent-ink-rgb: 43 51 57;
+    --ef-green-rgb: 147 178 89;
+    --ef-aqua-rgb: 58 148 135;
+    --ef-yellow-rgb: 223 160 0;
+    --ef-red-rgb: 248 85 82;
+    --ef-purple-rgb: 223 105 186;
+
+    --ef-bg: rgb(var(--ef-bg-rgb));
+    --ef-surface: rgb(var(--ef-surface-rgb));
+    --ef-surface-hover: rgb(var(--ef-surface-hover-rgb));
+    --ef-text: rgb(var(--ef-text-rgb));
+    --ef-muted: rgb(var(--ef-muted-rgb));
+    --ef-border: rgb(var(--ef-border-rgb));
+    --ef-accent: rgb(var(--ef-accent-rgb));
+    --ef-green: rgb(var(--ef-green-rgb));
+    --ef-aqua: rgb(var(--ef-aqua-rgb));
+    --ef-yellow: rgb(var(--ef-yellow-rgb));
+    --ef-red: rgb(var(--ef-red-rgb));
+    --ef-purple: rgb(var(--ef-purple-rgb));
   }
 
   .dark {
-    --ef-bg: #2b3339;
-    --ef-surface: #323d43;
-    --ef-surface-hover: #3a464c;
-    --ef-text: #d3c6aa;
-    --ef-muted: #9da9a0;
-    --ef-border: #475258;
-    --ef-accent: #a7c080;
+    --ef-bg-rgb: 43 51 57;
+    --ef-surface-rgb: 50 61 67;
+    --ef-surface-hover-rgb: 58 70 76;
+    --ef-text-rgb: 211 198 170;
+    --ef-muted-rgb: 157 169 160;
+    --ef-border-rgb: 71 82 88;
+    --ef-accent-rgb: 167 192 128;
+    --ef-accent-ink-rgb: 43 51 57;
+    --ef-green-rgb: 167 192 128;
+    --ef-aqua-rgb: 127 187 179;
+    --ef-yellow-rgb: 219 188 127;
+    --ef-red-rgb: 230 126 128;
+    --ef-purple-rgb: 214 153 182;
   }
 
   html {
@@ -35,19 +77,38 @@
     background-color: var(--ef-bg);
     color: var(--ef-text);
   }
+
+  ::selection {
+    background-color: rgb(var(--ef-accent-rgb) / 0.3);
+    color: var(--ef-text);
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--ef-bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--ef-border);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--ef-muted);
 }

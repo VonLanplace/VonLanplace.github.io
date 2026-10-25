@@ -14,9 +14,9 @@ export function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen bg-[var(--ef-bg)] text-[var(--ef-text)] flex flex-col font-sans transition-colors duration-300">
+        <div className="flex min-h-screen flex-col bg-ef-bg font-sans text-ef-text transition-colors duration-300">
           <Navbar />
-          <main className="flex-grow">
+          <main className="grow">
             <Hero />
             <About />
             <Experience />

@@ -12,14 +12,43 @@
     "description": "Estudando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste. Focado em Java, OOP, Clean Code, Linux e FOSS.",
     "viewProjects": "Ver Projetos do GitHub",
     "contactMe": "Entre em Contato",
-    "viewResume": "Currículo"
+    "viewResume": "Currículo",
+    "badge": "Backend Java & Systems Engineering",
+    "terminal": {
+      "tabTerminal": "Terminal",
+      "tabStack": "stack.json",
+      "tabStatus": "Status",
+      "whoami": "quem sou",
+      "bio": "Desenvolvedor backend Java focado em OOP, Clean Code, Linux e software livre.",
+      "focus": "foco",
+      "focusOutput": "Construindo sistemas Java robustos e projetos open source.",
+      "stack": "stack --list",
+      "api": "Serviços de API",
+      "apiStatus": "Operacional",
+      "security": "Auditoria de Segurança",
+      "securityStatus": "Aprovada",
+      "ready": "Pronto para novos desafios de arquitetura e projetos de impacto."
+    }
   },
   "about": {
     "title": "Sobre Mim",
-    "content": "Sou um desenvolvedor júnior cursando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste em São Paulo. Apaixonado por desenvolvimento backend em Java, arquitetura orientada a objetos (OOP) e princípios de Clean Code. Sou um entusiasta de sistemas Linux e software livre (FOSS)."
+    "content": "Sou um desenvolvedor júnior cursando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste em São Paulo. Apaixonado por desenvolvimento backend em Java, arquitetura orientada a objetos (OOP) e princípios de Clean Code. Sou um entusiasta de sistemas Linux e software livre (FOSS).",
+    "eyebrow": "Perfil & Princípios",
+    "subtitle": "Desenvolvimento backend com foco em código limpo, arquitetura e ecossistema open source.",
+    "extra": "Comprometido com a criação de sistemas eficientes, arquitetura limpa e ecossistemas open source baseados em Linux.",
+    "cards": {
+      "javaTitle": "Java Júnior Dev",
+      "javaDesc": "Backend & ecossistema Java",
+      "cleanTitle": "Clean Code & OOP",
+      "cleanDesc": "Design orientado a objetos",
+      "linuxTitle": "Linux & FOSS",
+      "linuxDesc": "Open source & sistemas"
+    }
   },
   "experience": {
     "title": "Formação & Experiência",
+    "eyebrow": "Trajetória & Timeline",
+    "subtitle": "Formação acadêmica e prática contínua em engenharia de software e backend.",
     "jobs": [
       {
         "role": "Estudante de Análise e Desenvolvimento de Sistemas",
@@ -36,32 +65,55 @@
     ]
   },
   "skills": {
-    "title": "Habilidades Técnicas"
+    "title": "Habilidades Técnicas",
+    "eyebrow": "Stack & Ferramentas",
+    "subtitle": "Tecnologias categorizadas dinamicamente a partir dos repositórios e perfil do GitHub.",
+    "count": "skills",
+    "activeStack": "Stack ativa"
   },
   "projects": {
     "title": "Projetos do GitHub (VonLanplace)",
     "subtitle": "Repositórios públicos obtidos dinamicamente da API do GitHub",
+    "eyebrow": "Repositórios & Open Source",
     "loading": "Carregando repositórios...",
     "error": "Erro ao carregar repositórios do GitHub.",
+    "retry": "Tentar novamente",
+    "refresh": "Atualizar",
     "stars": "Stars",
     "forks": "Forks",
     "noRepos": "Nenhum repositório encontrado.",
-    "viewRepo": "Ver Repositório"
+    "viewRepo": "Ver repositório",
+    "details": "Detalhes do repositório",
+    "close": "Fechar",
+    "openGithub": "Abrir no GitHub",
+    "noDescription": "Sem descrição fornecida para este repositório.",
+    "more": "Mais",
+    "less": "Menos",
+    "inspectSubtitle": "Inspeção de repositório do GitHub"
   },
   "contributions": {
     "title": "Projetos Contribuídos",
     "subtitle": "Repositórios externos e colaborações open source onde atuei",
+    "eyebrow": "Colaborações & Open Source",
     "noRepos": "Nenhuma contribuição externa recente encontrada."
   },
   "contact": {
     "title": "Contato",
     "subtitle": "Vamos trabalhar juntos ou trocar ideias?",
+    "eyebrow": "Vamos Conversar",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "resume": "Currículo"
+    "resume": "Currículo",
+    "website": "Website / Blog"
   },
   "footer": {
-    "rights": "Todos os direitos reservados."
+    "rights": "Todos os direitos reservados.",
+    "status": "online"
+  },
+  "common": {
+    "more": "Mais",
+    "less": "Menos",
+    "close": "Fechar"
   }
 }

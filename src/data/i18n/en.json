@@ -12,14 +12,43 @@
     "description": "Studying Systems Analysis and Development at FATEC Zona Leste. Focused on Java, OOP, Clean Code, Linux, and FOSS.",
     "viewProjects": "View GitHub Projects",
     "contactMe": "Contact Me",
-    "viewResume": "Resume"
+    "viewResume": "Resume",
+    "badge": "Java Backend & Systems Engineering",
+    "terminal": {
+      "tabTerminal": "Terminal",
+      "tabStack": "stack.json",
+      "tabStatus": "Status",
+      "whoami": "whoami",
+      "bio": "Java backend developer focused on OOP, Clean Code, Linux and free software.",
+      "focus": "focus",
+      "focusOutput": "Building robust Java systems and open source projects.",
+      "stack": "stack --list",
+      "api": "API Services",
+      "apiStatus": "Operational",
+      "security": "Security Audit",
+      "securityStatus": "Passed",
+      "ready": "Ready for new architectural challenges and impactful projects."
+    }
   },
   "about": {
     "title": "About Me",
-    "content": "I am a junior developer currently studying Systems Analysis and Development at FATEC Zona Leste in São Paulo. Passionate about Java backend development, object-oriented programming (OOP), and Clean Code principles. I am a strong advocate for Linux environments and Free and Open Source Software (FOSS)."
+    "content": "I am a junior developer currently studying Systems Analysis and Development at FATEC Zona Leste in São Paulo. Passionate about Java backend development, object-oriented programming (OOP), and Clean Code principles. I am a strong advocate for Linux environments and Free and Open Source Software (FOSS).",
+    "eyebrow": "Profile & Principles",
+    "subtitle": "Backend development focused on clean code, architecture, and the open source ecosystem.",
+    "extra": "Committed to building efficient systems, clean architecture, and Linux-based open source ecosystems.",
+    "cards": {
+      "javaTitle": "Java Junior Dev",
+      "javaDesc": "Backend & Java ecosystem",
+      "cleanTitle": "Clean Code & OOP",
+      "cleanDesc": "Object-oriented design",
+      "linuxTitle": "Linux & FOSS",
+      "linuxDesc": "Open source & systems"
+    }
   },
   "experience": {
     "title": "Education & Experience",
+    "eyebrow": "Career & Timeline",
+    "subtitle": "Academic background and continuous practice in software engineering and backend development.",
     "jobs": [
       {
         "role": "Systems Analysis & Development Student",
@@ -36,32 +65,55 @@
     ]
   },
   "skills": {
-    "title": "Technical Skills"
+    "title": "Technical Skills",
+    "eyebrow": "Stack & Tools",
+    "subtitle": "Technologies dynamically categorized from GitHub repositories and profile.",
+    "count": "skills",
+    "activeStack": "Active stack"
   },
   "projects": {
     "title": "GitHub Projects (VonLanplace)",
     "subtitle": "Public repositories dynamically fetched from the GitHub API",
+    "eyebrow": "Repositories & Open Source",
     "loading": "Loading repositories...",
     "error": "Failed to load GitHub repositories.",
+    "retry": "Try again",
+    "refresh": "Refresh",
     "stars": "Stars",
     "forks": "Forks",
     "noRepos": "No repositories found.",
-    "viewRepo": "View Repository"
+    "viewRepo": "View repository",
+    "details": "Repository details",
+    "close": "Close",
+    "openGithub": "Open on GitHub",
+    "noDescription": "No description provided for this repository.",
+    "more": "More",
+    "less": "Less",
+    "inspectSubtitle": "GitHub repository inspect"
   },
   "contributions": {
     "title": "Contributed Projects",
     "subtitle": "External repositories and open source collaborations",
+    "eyebrow": "Collaborations & Open Source",
     "noRepos": "No recent external contributions found."
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's build something together or discuss ideas?",
+    "eyebrow": "Let's Talk",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "resume": "Resume"
+    "resume": "Resume",
+    "website": "Website / Blog"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "status": "online"
+  },
+  "common": {
+    "more": "More",
+    "less": "Less",
+    "close": "Close"
   }
 }

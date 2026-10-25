@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
-import { Globe, Menu, X, Code2, Sun, Moon, Clock } from 'lucide-react';
+import { Clock, Code2, Globe, Menu, Moon, Sun, X } from 'lucide-react';
+import { Button } from './ui/button';
+import { cn } from '../lib/utils';
+
+const NAV_ITEMS = [
+  { id: 'about', key: 'about' },
+  { id: 'experience', key: 'experience' },
+  { id: 'skills', key: 'skills' },
+  { id: 'projects', key: 'projects' },
+  { id: 'contact', key: 'contact' },
+] as const;
 
 export const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -20,110 +30,121 @@ export const Navbar: React.FC = () => {
 
   const scrollTo = (id: string) => {
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const ThemeIcon = themeMode === 'auto' ? Clock : isDark ? Moon : Sun;
+
   return (
-    <header className="sticky top-0 z-50 bg-[var(--ef-bg)]/80 backdrop-blur-md border-b border-[var(--ef-border)] transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollTo('hero')}>
-          <div className="bg-[var(--ef-accent)] p-2 rounded-xl text-[var(--ef-bg)] shadow-md">
-            <Code2 className="w-5 h-5" />
-          </div>
-          <span className="font-bold text-lg tracking-tight text-[var(--ef-text)]">
+    <header className="sticky top-0 z-50 border-b border-ef-border bg-ef-bg/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <button
+          type="button"
+          onClick={() => scrollTo('hero')}
+          className="flex items-center gap-2 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
+          aria-label="VonLanplace"
+        >
+          <span className="rounded-xl bg-ef-accent p-2 text-ef-accent-ink shadow-md">
+            <Code2 className="h-5 w-5" />
+          </span>
+          <span className="text-lg font-bold tracking-tight text-ef-text">
             VonLanplace
           </span>
-        </div>
+        </button>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollTo('about')} className="text-[var(--ef-muted)] hover:text-[var(--ef-text)] font-medium transition-colors">
-            {t.nav.about}
-          </button>
-          <button onClick={() => scrollTo('experience')} className="text-[var(--ef-muted)] hover:text-[var(--ef-text)] font-medium transition-colors">
-            {t.nav.experience}
-          </button>
-          <button onClick={() => scrollTo('skills')} className="text-[var(--ef-muted)] hover:text-[var(--ef-text)] font-medium transition-colors">
-            {t.nav.skills}
-          </button>
-          <button onClick={() => scrollTo('projects')} className="text-[var(--ef-muted)] hover:text-[var(--ef-text)] font-medium transition-colors">
-            {t.nav.projects}
-          </button>
-          <button onClick={() => scrollTo('contact')} className="text-[var(--ef-muted)] hover:text-[var(--ef-text)] font-medium transition-colors">
-            {t.nav.contact}
-          </button>
-
-          <div className="flex items-center space-x-2 border-l border-[var(--ef-border)] pl-4">
-            {/* Theme Switcher Button */}
+        <nav className="hidden items-center gap-1 md:flex" aria-label="Main navigation">
+          {NAV_ITEMS.map((item) => (
             <button
+              key={item.id}
+              type="button"
+              onClick={() => scrollTo(item.id)}
+              className="rounded-xl px-3 py-2 text-sm font-medium text-ef-muted transition-colors hover:bg-ef-surface hover:text-ef-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
+            >
+              {t.nav[item.key]}
+            </button>
+          ))}
+
+          <div className="ml-3 flex items-center gap-2 border-l border-ef-border pl-3">
+            <Button
+              variant="outline"
+              size="sm"
               onClick={cycleTheme}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-[var(--ef-surface)] hover:bg-[var(--ef-surface-hover)] text-[var(--ef-text)] border border-[var(--ef-border)] transition-all text-sm font-medium shadow-sm"
-              title={`Tema Everforest (${themeMode.toUpperCase()})`}
+              title={`Theme: ${themeMode}`}
+              aria-label={`Theme: ${themeMode}`}
+              className="font-mono"
             >
-              {themeMode === 'auto' ? <Clock className="w-4 h-4 text-amber-600 dark:text-amber-400" /> : isDark ? <Moon className="w-4 h-4 text-cyan-600 dark:text-cyan-400" /> : <Sun className="w-4 h-4 text-orange-600 dark:text-orange-400" />}
-              <span className="text-xs uppercase">{themeMode}</span>
-            </button>
+              <ThemeIcon className="h-4 w-4 text-ef-accent" />
+              <span className="text-[10px] uppercase">{themeMode}</span>
+            </Button>
 
-            {/* Language Switcher */}
-            <button
+            <Button
+              variant="outline"
+              size="sm"
               onClick={toggleLanguage}
-              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl bg-[var(--ef-surface)] hover:bg-[var(--ef-surface-hover)] text-[var(--ef-text)] border border-[var(--ef-border)] transition-all text-sm font-medium shadow-sm"
-              title="Mudar Idioma / Change Language"
+              title="Mudar idioma / Change language"
+              aria-label="Mudar idioma / Change language"
+              className="font-mono"
             >
-              <Globe className="w-4 h-4 text-[var(--ef-accent)]" />
+              <Globe className="h-4 w-4 text-ef-accent" />
               <span>{language.toUpperCase()}</span>
-            </button>
+            </Button>
           </div>
         </nav>
 
-        {/* Mobile menu button */}
-        <div className="flex items-center space-x-2 md:hidden">
-          <button
+        <div className="flex items-center gap-1.5 md:hidden">
+          <Button
+            variant="outline"
+            size="icon"
             onClick={cycleTheme}
-            className="p-2 rounded-xl bg-[var(--ef-surface)] text-[var(--ef-text)] border border-[var(--ef-border)]"
-            title="Theme"
+            aria-label={`Theme: ${themeMode}`}
+            className="h-9 w-9"
           >
-            {themeMode === 'auto' ? <Clock className="w-4 h-4" /> : isDark ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
-          </button>
-          <button
+            <ThemeIcon className="h-4 w-4 text-ef-accent" />
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
             onClick={toggleLanguage}
-            className="flex items-center space-x-1 px-2.5 py-1.5 rounded-xl bg-[var(--ef-surface)] text-[var(--ef-text)] border border-[var(--ef-border)] text-xs font-medium"
+            aria-label="Mudar idioma / Change language"
+            className="h-9 px-2.5 font-mono"
           >
-            <Globe className="w-3.5 h-3.5 text-[var(--ef-accent)]" />
+            <Globe className="h-3.5 w-3.5 text-ef-accent" />
             <span>{language.toUpperCase()}</span>
-          </button>
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-[var(--ef-text)] p-2"
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            className="h-9 w-9"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </Button>
         </div>
       </div>
 
-      {/* Mobile dropdown */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-[var(--ef-surface)] border-b border-[var(--ef-border)] px-4 pt-3 pb-5 space-y-2">
-          <button onClick={() => scrollTo('about')} className="block w-full text-left px-3 py-2 rounded-xl text-[var(--ef-text)] hover:bg-[var(--ef-surface-hover)] font-medium">
-            {t.nav.about}
-          </button>
-          <button onClick={() => scrollTo('experience')} className="block w-full text-left px-3 py-2 rounded-xl text-[var(--ef-text)] hover:bg-[var(--ef-surface-hover)] font-medium">
-            {t.nav.experience}
-          </button>
-          <button onClick={() => scrollTo('skills')} className="block w-full text-left px-3 py-2 rounded-xl text-[var(--ef-text)] hover:bg-[var(--ef-surface-hover)] font-medium">
-            {t.nav.skills}
-          </button>
-          <button onClick={() => scrollTo('projects')} className="block w-full text-left px-3 py-2 rounded-xl text-[var(--ef-text)] hover:bg-[var(--ef-surface-hover)] font-medium">
-            {t.nav.projects}
-          </button>
-          <button onClick={() => scrollTo('contact')} className="block w-full text-left px-3 py-2 rounded-xl text-[var(--ef-text)] hover:bg-[var(--ef-surface-hover)] font-medium">
-            {t.nav.contact}
-          </button>
-        </div>
-      )}
+      <div
+        id="mobile-menu"
+        className={cn(
+          'overflow-hidden border-t border-ef-border bg-ef-surface md:hidden',
+          mobileMenuOpen ? 'block animate-in fade-in-0 slide-in-from-top-2 motion-reduce:animate-none' : 'hidden'
+        )}
+      >
+        <nav className="flex flex-col gap-1 px-4 py-3" aria-label="Mobile navigation">
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              onClick={() => scrollTo(item.id)}
+              className="rounded-xl px-3 py-2.5 text-left text-sm font-medium text-ef-text transition-colors hover:bg-ef-surface-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
+            >
+              {t.nav[item.key]}
+            </button>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 };
