@@ -35,6 +35,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          test -f dist/404.html
+          test -f dist/.nojekyll
+          if grep -q '/src/main.tsx' dist/index.html; then
+            echo "dist/index.html still points to raw source; refusing to deploy." >&2
+            exit 1
+          fi
+          if ! grep -q 'type="module"' dist/index.html; then
+            echo "dist/index.html has no module script; refusing to deploy." >&2
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
