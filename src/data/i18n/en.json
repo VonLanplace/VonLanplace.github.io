@@ -52,16 +52,22 @@
     "subtitle": "Academic background and continuous practice in software engineering and backend development.",
     "jobs": [
       {
+        "role": "Project Assistant",
+        "company": "Aláfia Sustentabilidade — PIPE/FAPESP",
+        "period": "June 2026 - Present",
+        "description": "Contributing to the development of HEXMETRICS®, Aláfia's digital solution for corporate sustainability assessment and simulation. The project is part of the PIPE/FAPESP Phase 1 program and applies the 5SEnSU+G model to environmental, social, economic, and governance indicators."
+      },
+      {
         "role": "Systems Analysis & Development Student",
         "company": "FATEC Zona Leste",
         "period": "2023 - Present",
-        "description": "Higher education focused on software engineering, OOP, databases, and enterprise Java systems."
+        "description": "Undergraduate program in Systems Analysis and Development focused on software engineering, OOP, databases, and enterprise Java systems."
       },
       {
-        "role": "Junior Backend Developer",
-        "company": "Personal Projects & Linux Practice",
-        "period": "2024 - Present",
-        "description": "Developing robust Java applications, Linux shell automation, and advanced FOSS studies."
+        "role": "Deploy / Debug / System Maintenance",
+        "company": "FATEC Zona Leste",
+        "period": "First semester of 2026",
+        "description": "Supported local server updates and preparation for student activities, testing and deploying a local version of the FATEC ZL Alumni Directory (Carômetro de Egressos), a platform that reconnects alumni with the institution."
       }
     ]
   },
