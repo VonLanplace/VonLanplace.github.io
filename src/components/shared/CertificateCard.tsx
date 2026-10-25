@@ -13,15 +13,7 @@ export function CertificateCard({
   previewError,
 }: CertificateCardProps) {
   return (
-    <a
-      href={certificate.sourceUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`${openLabel}: ${certificate.title}`}
-      title={certificate.title}
-      data-carousel-swipe="true"
-      className="group block rounded-3xl border border-ef-border bg-ef-surface/80 p-2.5 shadow-xs backdrop-blur-md transition-all duration-300 hover:border-ef-accent/50 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
-    >
+    <div className="relative rounded-3xl border border-ef-border bg-ef-surface/80 p-2.5 shadow-xs backdrop-blur-md transition-all duration-300 hover:border-ef-accent/50 hover:shadow-xl">
       <div className="relative aspect-[1.414/1] overflow-hidden rounded-2xl border border-ef-border/60 bg-ef-bg">
         {certificate.kind === 'pdf' ? (
           <PdfPreview
@@ -39,6 +31,15 @@ export function CertificateCard({
           />
         )}
       </div>
-    </a>
+      <a
+        href={certificate.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${openLabel}: ${certificate.title}`}
+        title={certificate.title}
+        data-carousel-swipe="true"
+        className="absolute inset-0 rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
+      />
+    </div>
   );
 }

@@ -83,7 +83,7 @@ export const Certificates: React.FC = () => {
               rel="noopener noreferrer"
               className={buttonVariants({ variant: 'outline' })}
             >
-              <ExternalLink className="h-4 w-4 text-ef-accent" />
+              <ExternalLink className="h-4 w-4 text-ef-accent-text" />
               <span>{t.certificates.viewRepository}</span>
             </a>
           }

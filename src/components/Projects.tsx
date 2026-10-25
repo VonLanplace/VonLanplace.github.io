@@ -84,7 +84,7 @@ export const Projects: React.FC = () => {
           action={
             <Button variant="outline" onClick={loadRepos} disabled={loading}>
               <RefreshCw
-                className={cn('h-4 w-4 text-ef-accent', loading && 'animate-spin motion-reduce:animate-none')}
+                className={cn('h-4 w-4 text-ef-accent-text', loading && 'animate-spin motion-reduce:animate-none')}
               />
               <span>{t.projects.refresh}</span>
             </Button>

@@ -48,7 +48,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className="mb-6 flex items-start gap-2 text-xl font-semibold text-ef-text/90 sm:text-2xl">
-              <Code2 className="mt-1 h-5 w-5 shrink-0 text-ef-accent" />
+              <Code2 className="mt-1 h-5 w-5 shrink-0 text-ef-accent-text" />
               <span>{t.hero.title}</span>
             </p>
 
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className={buttonVariants({ variant: 'outline', size: 'lg' })}
               >
-                <FileText className="h-4 w-4 text-ef-accent" />
+                <FileText className="h-4 w-4 text-ef-accent-text" />
                 <span>{t.hero.viewResume}</span>
               </a>
 
@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
                   <span className="h-3 w-3 rounded-full bg-ef-green/80" />
                 </div>
                 <span className="font-mono text-xs text-ef-muted">lucas@sartorelli:~</span>
-                <Cpu className="h-4 w-4 text-ef-accent" />
+                <Cpu className="h-4 w-4 text-ef-accent-text" />
               </div>
 
               <div className="p-5">
@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
                     className="min-h-[190px] space-y-3 pt-2 font-mono text-sm text-ef-text"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="text-ef-accent">$</span>
+                      <span className="text-ef-accent-text">$</span>
                       <span>{t.hero.terminal.whoami}</span>
                     </div>
                     <p className="pl-4 text-xs leading-relaxed text-ef-muted">
@@ -123,7 +123,7 @@ export const Hero: React.FC = () => {
                     </p>
 
                     <div className="flex items-center gap-2 pt-1">
-                      <span className="text-ef-accent">$</span>
+                      <span className="text-ef-accent-text">$</span>
                       <span>{t.hero.terminal.focus}</span>
                     </div>
                     <p className="pl-4 text-xs leading-relaxed text-ef-muted">
@@ -131,7 +131,7 @@ export const Hero: React.FC = () => {
                     </p>
 
                     <div className="flex items-center gap-2 pt-1">
-                      <span className="text-ef-accent">$</span>
+                      <span className="text-ef-accent-text">$</span>
                       <span className="animate-pulse motion-reduce:animate-none">_</span>
                     </div>
                   </TabsContent>
@@ -140,7 +140,7 @@ export const Hero: React.FC = () => {
                     value="stack"
                     className="min-h-[190px] pt-2 font-mono text-xs text-ef-text"
                   >
-                    <pre className="overflow-x-auto rounded-xl border border-ef-border bg-ef-bg p-3 text-ef-accent">
+                    <pre className="overflow-x-auto rounded-xl border border-ef-border bg-ef-bg p-3 text-ef-accent-text">
 {`{
   "core": ["Java", "TypeScript", "React"],
   "backend": ["OOP", "REST", "SQL"],
@@ -156,7 +156,7 @@ export const Hero: React.FC = () => {
                   >
                     <div className="flex items-center justify-between rounded-xl border border-ef-border bg-ef-bg p-2.5">
                       <span className="flex items-center gap-2 text-ef-muted">
-                        <Server className="h-3.5 w-3.5 text-ef-accent" />
+                        <Server className="h-3.5 w-3.5 text-ef-accent-text" />
                         <span>{t.hero.terminal.api}</span>
                       </span>
                       <Badge className="text-[10px]">{t.hero.terminal.apiStatus}</Badge>
@@ -164,10 +164,10 @@ export const Hero: React.FC = () => {
 
                     <div className="flex items-center justify-between rounded-xl border border-ef-border bg-ef-bg p-2.5">
                       <span className="flex items-center gap-2 text-ef-muted">
-                        <ShieldCheck className="h-3.5 w-3.5 text-ef-accent" />
+                        <ShieldCheck className="h-3.5 w-3.5 text-ef-accent-text" />
                         <span>{t.hero.terminal.security}</span>
                       </span>
-                      <Badge variant="outline" className="text-[10px] text-ef-accent">
+                      <Badge variant="outline" className="text-[10px] text-ef-accent-text">
                         {t.hero.terminal.securityStatus}
                       </Badge>
                     </div>

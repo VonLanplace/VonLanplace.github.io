@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
               aria-label={`Theme: ${themeMode}`}
               className="font-mono"
             >
-              <ThemeIcon className="h-4 w-4 text-ef-accent" />
+              <ThemeIcon className="h-4 w-4 text-ef-accent-text" />
               <span className="text-[10px] uppercase">{themeMode}</span>
             </Button>
 
@@ -83,10 +83,10 @@ export const Navbar: React.FC = () => {
               size="sm"
               onClick={toggleLanguage}
               title="Mudar idioma / Change language"
-              aria-label="Mudar idioma / Change language"
+              aria-label={`${language.toUpperCase()} — Mudar idioma / Change language`}
               className="font-mono"
             >
-              <Globe className="h-4 w-4 text-ef-accent" />
+              <Globe className="h-4 w-4 text-ef-accent-text" />
               <span>{language.toUpperCase()}</span>
             </Button>
           </div>
@@ -100,16 +100,16 @@ export const Navbar: React.FC = () => {
             aria-label={`Theme: ${themeMode}`}
             className="h-9 w-9"
           >
-            <ThemeIcon className="h-4 w-4 text-ef-accent" />
+            <ThemeIcon className="h-4 w-4 text-ef-accent-text" />
           </Button>
           <Button
             variant="outline"
             size="sm"
             onClick={toggleLanguage}
-            aria-label="Mudar idioma / Change language"
+            aria-label={`${language.toUpperCase()} — Mudar idioma / Change language`}
             className="h-9 px-2.5 font-mono"
           >
-            <Globe className="h-3.5 w-3.5 text-ef-accent" />
+            <Globe className="h-3.5 w-3.5 text-ef-accent-text" />
             <span>{language.toUpperCase()}</span>
           </Button>
           <Button

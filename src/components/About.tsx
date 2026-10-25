@@ -42,7 +42,7 @@ export const About: React.FC = () => {
                 key={titleKey}
                 className="flex items-start gap-4 p-5 hover:border-ef-accent/50"
               >
-                <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent">
+                <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent-text">
                   <Icon className="h-5 w-5" />
                 </span>
                 <div>

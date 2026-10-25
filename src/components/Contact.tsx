@@ -107,7 +107,7 @@ export const Contact: React.FC = () => {
               rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
               className="group flex items-center gap-4 rounded-2xl border border-ef-border bg-ef-surface/80 p-5 shadow-xs transition-all hover:border-ef-accent/50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ef-accent"
             >
-              <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent transition-transform group-hover:scale-105">
+              <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent-text transition-transform group-hover:scale-105">
                 {link.icon}
               </span>
               <span className="min-w-0 flex-1">
@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
                   {link.value}
                 </span>
               </span>
-              <ExternalLink className="h-4 w-4 shrink-0 text-ef-muted transition-colors group-hover:text-ef-accent" />
+              <ExternalLink className="h-4 w-4 shrink-0 text-ef-muted transition-colors group-hover:text-ef-accent-text" />
             </a>
           ))}
         </div>

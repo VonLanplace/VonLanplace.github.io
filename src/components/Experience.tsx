@@ -27,12 +27,12 @@ export const Experience: React.FC = () => {
                 <div className="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
                   <div>
                     <div className="mb-1 flex items-center gap-2">
-                      <span className="font-mono text-xs text-ef-accent">
+                      <span className="font-mono text-xs text-ef-accent-text">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <h3 className="text-xl font-bold text-ef-text">{job.role}</h3>
                     </div>
-                    <p className="flex items-center gap-1.5 font-mono text-sm font-semibold text-ef-accent">
+                    <p className="flex items-center gap-1.5 font-mono text-sm font-semibold text-ef-accent-text">
                       <Building2 className="h-4 w-4" />
                       <span>{job.company}</span>
                     </p>

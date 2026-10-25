@@ -32,7 +32,7 @@ export const RepoDetailsDialog: React.FC<RepoDetailsDialogProps> = ({
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <FolderGit2 className="h-5 w-5 text-ef-accent" />
+              <FolderGit2 className="h-5 w-5 text-ef-accent-text" />
               <span className="truncate">{repo.name}</span>
             </DialogTitle>
             <DialogDescription className="font-mono">
@@ -66,7 +66,7 @@ export const RepoDetailsDialog: React.FC<RepoDetailsDialogProps> = ({
               </div>
               <div className="flex items-center justify-between rounded-xl border border-ef-border bg-ef-bg p-3">
                 <span className="flex items-center gap-1.5">
-                  <GitBranch className="h-3.5 w-3.5 text-ef-accent" />
+                  <GitBranch className="h-3.5 w-3.5 text-ef-accent-text" />
                   {t.projects.forks}
                 </span>
                 <span className="font-bold text-ef-text">{repo.forks_count}</span>

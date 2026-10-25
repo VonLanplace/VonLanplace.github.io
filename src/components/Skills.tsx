@@ -42,7 +42,7 @@ export const Skills: React.FC = () => {
               <Card className="p-6 shadow-lg sm:p-8">
                 <div className="mb-7 flex flex-col justify-between gap-3 border-b border-ef-border pb-5 sm:flex-row sm:items-center">
                   <div className="flex items-center gap-3">
-                    <span className="rounded-2xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent">
+                    <span className="rounded-2xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent-text">
                       <Cpu className="h-6 w-6" />
                     </span>
                     <div>
@@ -65,7 +65,7 @@ export const Skills: React.FC = () => {
                       key={item}
                       className="group flex items-center gap-2.5 rounded-xl border border-ef-border bg-ef-bg p-3 shadow-xs transition-all hover:border-ef-accent/60"
                     >
-                      <Code2 className="h-4 w-4 shrink-0 text-ef-muted transition-colors group-hover:text-ef-accent" />
+                      <Code2 className="h-4 w-4 shrink-0 text-ef-muted transition-colors group-hover:text-ef-accent-text" />
                       <span className="truncate text-sm font-medium text-ef-text">
                         {item}
                       </span>

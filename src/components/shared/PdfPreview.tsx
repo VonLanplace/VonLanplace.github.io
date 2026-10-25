@@ -97,8 +97,8 @@ export function PdfPreview({ url, title, errorLabel }: PdfPreviewProps) {
       aria-label={title}
     >
       {status === 'error' ? (
-        <div className="flex flex-col items-center gap-2 p-6 text-center text-ef-muted">
-          <FileText className="h-8 w-8 text-ef-accent" />
+        <div className="flex flex-col items-center gap-2 p-6 text-center text-[#50662e]">
+          <FileText className="h-8 w-8" />
           <span className="text-xs font-medium">{errorLabel}</span>
         </div>
       ) : (

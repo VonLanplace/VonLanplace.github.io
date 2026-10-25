@@ -39,7 +39,7 @@ export function RepoCard({ repo, onDetails, className }: RepoCardProps) {
 
       <div className="relative z-10">
         <div className="mb-4 flex items-center justify-between gap-2">
-          <h3 className="truncate text-lg font-bold text-ef-text transition-colors group-hover:text-ef-accent">
+          <h3 className="truncate text-lg font-bold text-ef-text transition-colors group-hover:text-ef-accent-text">
             {repo.name}
           </h3>
           <div className="flex shrink-0 items-center gap-1.5">
@@ -52,7 +52,7 @@ export function RepoCard({ repo, onDetails, className }: RepoCardProps) {
                   aria-label={t.projects.details}
                   onClick={() => onDetails(repo)}
                 >
-                  <BookOpen className="h-4 w-4 text-ef-accent" />
+                  <BookOpen className="h-4 w-4 text-ef-accent-text" />
                 </Button>
               </Tooltip>
             )}
@@ -87,7 +87,7 @@ export function RepoCard({ repo, onDetails, className }: RepoCardProps) {
             <button
               type="button"
               onClick={() => setExpanded((value) => !value)}
-              className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-ef-accent transition-opacity hover:opacity-80"
+              className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-ef-accent-text transition-opacity hover:opacity-80"
             >
               <span>{expanded ? t.common.less : t.common.more}</span>
               {expanded ? (
@@ -117,7 +117,7 @@ export function RepoCard({ repo, onDetails, className }: RepoCardProps) {
               <span>{repo.stargazers_count}</span>
             </span>
             <span className="flex items-center gap-1" title={t.projects.forks}>
-              <GitBranch className="h-4 w-4 text-ef-accent" />
+              <GitBranch className="h-4 w-4 text-ef-accent-text" />
               <span>{repo.forks_count}</span>
             </span>
           </div>

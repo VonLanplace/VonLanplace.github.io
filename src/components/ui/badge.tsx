@@ -5,11 +5,11 @@ export type BadgeVariant = 'default' | 'outline' | 'tech' | 'muted';
 
 const variantStyles: Record<BadgeVariant, string> = {
   default:
-    'border-ef-accent/30 bg-ef-accent/15 text-ef-accent hover:bg-ef-accent/25',
+    'border-ef-accent/30 bg-ef-accent/15 text-ef-accent-text hover:bg-ef-accent/25',
   outline:
     'border-ef-border bg-transparent text-ef-muted hover:text-ef-text',
   tech:
-    'border-ef-border bg-ef-bg font-mono text-ef-accent hover:border-ef-accent/60',
+    'border-ef-border bg-ef-bg font-mono text-ef-accent-text hover:border-ef-accent/60',
   muted:
     'border-ef-border bg-ef-surface-hover text-ef-muted',
 };
