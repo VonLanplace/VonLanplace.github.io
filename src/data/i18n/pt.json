@@ -52,16 +52,22 @@
     "subtitle": "Formação acadêmica e prática contínua em engenharia de software e backend.",
     "jobs": [
       {
+        "role": "Assistente de Projeto",
+        "company": "Aláfia Sustentabilidade — PIPE/FAPESP",
+        "period": "Junho de 2026 - Presente",
+        "description": "Atuação no desenvolvimento da HEXMETRICS®, solução digital da Aláfia para avaliação e simulação da sustentabilidade corporativa. O projeto integra o PIPE/FAPESP – Fase 1 e utiliza o modelo 5SEnSU+G para analisar indicadores ambientais, sociais, econômicos e de governança."
+      },
+      {
         "role": "Estudante de Análise e Desenvolvimento de Sistemas",
         "company": "FATEC Zona Leste",
         "period": "2023 - Presente",
-        "description": "Formação superior focada em engenharia de software, POO, banco de dados e sistemas corporativos em Java."
+        "description": "Formação superior com foco em engenharia de software, POO, banco de dados e sistemas corporativos em Java."
       },
       {
-        "role": "Desenvolvedor Backend em Formação",
-        "company": "Projetos Pessoais & Prática em Linux",
-        "period": "2024 - Presente",
-        "description": "Desenvolvimento de aplicações robustas em Java, automações shell em ambientes Linux e estudos avançados de FOSS."
+        "role": "Deploy / Debug / Manutenção de Sistemas",
+        "company": "FATEC Zona Leste",
+        "period": "1º semestre de 2026",
+        "description": "Apoio na atualização e preparação do servidor local para atividades dos alunos, com testes e implantação de uma versão local do Carômetro de Egressos da Fatec ZL, plataforma de reconexão entre ex-alunos e a instituição."
       }
     ]
   },
