@@ -4,11 +4,12 @@
     "experience": "Experiência",
     "skills": "Habilidades",
     "projects": "Projetos",
+    "certificates": "Certificados",
     "contact": "Contato"
   },
   "hero": {
     "greeting": "Olá, eu sou",
-    "title": "Lucas Sartorelli (VonLanplace) — Java Júnior Dev & Estudante de ADS na FATEC",
+    "title": "Lucas Sartorelli (VonLanplace) — Júnior Dev & Estudante de ADS na FATEC",
     "description": "Estudando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste. Focado em Java, OOP, Clean Code, Linux e FOSS.",
     "viewProjects": "Ver Projetos do GitHub",
     "contactMe": "Entre em Contato",
@@ -32,17 +33,17 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "content": "Sou um desenvolvedor júnior cursando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste em São Paulo. Apaixonado por desenvolvimento backend em Java, arquitetura orientada a objetos (OOP) e princípios de Clean Code. Sou um entusiasta de sistemas Linux e software livre (FOSS).",
+    "content": "Desenvolvedor júnior em início de carreira, cursando Análise e Desenvolvimento de Sistemas na FATEC Zona Leste. Foco em backend com Java, Rust e SQL, aplicando OOP, Clean Code e arquitetura limpa. Tenho experiência com modelagem UML e metodologias ágeis, colaborando em ciclos curtos de desenvolvimento e evolução contínua.",
     "eyebrow": "Perfil & Princípios",
-    "subtitle": "Desenvolvimento backend com foco em código limpo, arquitetura e ecossistema open source.",
-    "extra": "Comprometido com a criação de sistemas eficientes, arquitetura limpa e ecossistemas open source baseados em Linux.",
+    "subtitle": "Backend com Java, Rust e SQL, código limpo e arquitetura sustentável.",
+    "extra": "Busco evolução contínua e colaboração, criando soluções que equilibrem performance, simplicidade e facilidade de manutenção.",
     "cards": {
-      "javaTitle": "Java Júnior Dev",
-      "javaDesc": "Backend & ecossistema Java",
+      "javaTitle": "Júnior Dev",
+      "javaDesc": "Júnior Dev em início de carreira, com foco em backend Java, Rust e SQL. Busco evoluir na prática e aplicar boas práticas de engenharia em soluções eficientes e bem estruturadas.",
       "cleanTitle": "Clean Code & OOP",
-      "cleanDesc": "Design orientado a objetos",
+      "cleanDesc": "Base em Orientação a Objetos e Clean Code, com modelagem UML e experiência em metodologias ágeis para organizar o código, colaborar em equipe e entregar em ciclos curtos.",
       "linuxTitle": "Linux & FOSS",
-      "linuxDesc": "Open source & sistemas"
+      "linuxDesc": "Usuário Linux há anos, com experiência em várias distribuições, resolução de problemas e bugs da plataforma, além de uso extensivo de FOSS."
     }
   },
   "experience": {
@@ -90,6 +91,18 @@
     "more": "Mais",
     "less": "Menos",
     "inspectSubtitle": "Inspeção de repositório do GitHub"
+  },
+  "certificates": {
+    "title": "Certificados",
+    "eyebrow": "Aprendizado Contínuo",
+    "subtitle": "Cursos, formações e certificações concluídas.",
+    "loading": "Carregando certificados...",
+    "error": "Erro ao carregar certificados do GitHub.",
+    "retry": "Tentar novamente",
+    "empty": "Nenhum certificado encontrado.",
+    "viewRepository": "Ver repositório",
+    "openOriginal": "Abrir certificado original",
+    "previewError": "Prévia indisponível"
   },
   "contributions": {
     "title": "Projetos Contribuídos",

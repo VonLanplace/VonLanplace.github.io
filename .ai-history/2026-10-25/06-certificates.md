@@ -1,0 +1,50 @@
+# AI Change Log - 2026-10-25
+
+## 06. Seção de Certificados
+- Adicionada seção `#certificates` após Projetos, antes de Projetos Contribuídos.
+- Adicionado item “Certificados”/“Certificates” ao menu desktop e mobile.
+- Fonte dos dados: repositório `VonLanplace/courses-and-certificates`, branch `main`.
+  - API: `https://api.github.com/repos/VonLanplace/courses-and-certificates/git/trees/main?recursive=1`.
+  - Filtro de extensões: `pdf`, `png`, `jpg`, `jpeg`, `webp`.
+  - Cache: `localStorage`, chave `vonlanplace_certificates`, validade de 30 minutos.
+  - Em caso de falha com cache existente, os certificados em cache são reaproveitados.
+  - Ao ler o cache, URLs raw/blob e o preview local são regenerados para evitar asset com hash antigo após deploy.
+- Repositório encontrado: 8 PDFs + 1 PNG TOEIC.
+- PDFs renderizados no cliente com `pdfjs-dist@6.4.299`:
+  - worker via `pdf.worker.min.mjs?url`;
+  - carregamento do chunk PDF.js somente quando um card de PDF entra na viewport;
+  - renderização da primeira página em canvas de 1200 px de largura;
+  - `IntersectionObserver` com `rootMargin: 240px`;
+  - erros de PDF mostram “Prévia indisponível” sem quebrar o card/link.
+- Cards:
+  - somente imagem, sem título/descrição visível;
+  - proporção A4 paisagem `1.414:1`;
+  - card inteiro é um link para o arquivo original no GitHub, aberto em nova aba;
+  - `CertificateCard` e `PdfPreview` criados em `src/components/shared/`.
+- PNG TOEIC:
+  - original de 12,6 MB não é carregado na grade;
+  - preview local otimizado em `src/assets/certificates/toeic-2025.webp` (1600×1129, 228 KB);
+  - card continua apontando para o PNG original.
+- `useCarousel`:
+  - anchors com `data-carousel-swipe` passaram a permitir arraste;
+  - clique é suprimido após swipe;
+  - carrossel com 3 cards por página no desktop e 1 no mobile.
+- Projetos:
+  - `VonLanplace.github.io` e `courses-and-certificates` excluídos de `fetchUserRepos`;
+  - filtro aplicado tanto à resposta nova quanto ao cache, incluindo fallback.
+- Dependência:
+  - `pdfjs-dist@^6.4.299`, licença Apache-2.0;
+  - `npm audit`: 0 vulnerabilidades;
+  - OSV: 0 vulnerabilidades;
+  - requer Node `>=22.13`; ambiente local Node `v22.23.1`.
+- QA:
+  - 9 cards detectados (8 PDFs + 1 imagem);
+  - desktop: 3 páginas, 3 previews PDF renderizados na primeira página;
+  - mobile: 1 card por página, 7 indicadores visíveis com janela de paginação existente;
+  - swipe mobile avançou para a página 2 sem abrir o link;
+  - clique no card abriu corretamente a URL original do GitHub;
+  - estado de erro 403 exibiu mensagem localizada e botão “Tentar novamente”;
+  - `npm run typecheck` passou;
+  - `npm run build` passou;
+  - `dist` gerado com worker PDF e preview WebP;
+  - `src/data/skills.json` e `src/data/contributions.json` restaurados após o build.

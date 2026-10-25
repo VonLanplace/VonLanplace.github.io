@@ -31,7 +31,7 @@ export function RepoCard({ repo, onDetails, className }: RepoCardProps) {
   return (
     <Card
       className={cn(
-        'group relative flex h-full flex-col justify-between overflow-hidden p-6 hover:border-ef-accent/50 hover:shadow-xl',
+        'group relative flex h-full flex-col justify-between overflow-hidden p-6 hover:border-ef-accent/50',
         className
       )}
     >

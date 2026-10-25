@@ -23,7 +23,7 @@ export const Experience: React.FC = () => {
             <div key={`${job.company}-${index}`} className="group relative pl-8 sm:pl-12">
               <span className="absolute -left-[9px] top-6 h-4 w-4 rounded-full border-4 border-ef-accent bg-ef-bg shadow-md transition-transform group-hover:scale-125" />
 
-              <Card className="p-6 hover:border-ef-accent/50 hover:shadow-lg sm:p-8">
+              <Card className="p-6 hover:border-ef-accent/50 sm:p-8">
                 <div className="mb-4 flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
                   <div>
                     <div className="mb-1 flex items-center gap-2">

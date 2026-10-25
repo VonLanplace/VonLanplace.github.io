@@ -4,11 +4,12 @@
     "experience": "Experience",
     "skills": "Skills",
     "projects": "Projects",
+    "certificates": "Certificates",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Lucas Sartorelli (VonLanplace) — Java Junior Dev & Software Engineering Student",
+    "title": "Lucas Sartorelli (VonLanplace) — Junior Dev & Software Engineering Student",
     "description": "Studying Systems Analysis and Development at FATEC Zona Leste. Focused on Java, OOP, Clean Code, Linux, and FOSS.",
     "viewProjects": "View GitHub Projects",
     "contactMe": "Contact Me",
@@ -32,17 +33,17 @@
   },
   "about": {
     "title": "About Me",
-    "content": "I am a junior developer currently studying Systems Analysis and Development at FATEC Zona Leste in São Paulo. Passionate about Java backend development, object-oriented programming (OOP), and Clean Code principles. I am a strong advocate for Linux environments and Free and Open Source Software (FOSS).",
+    "content": "Early-career Junior Developer studying Systems Analysis and Development at FATEC Zona Leste. Focused on backend with Java, Rust and SQL, applying OOP, Clean Code and clean architecture. Experienced with UML modeling and agile methodologies, collaborating in short development cycles and continuous improvement.",
     "eyebrow": "Profile & Principles",
-    "subtitle": "Backend development focused on clean code, architecture, and the open source ecosystem.",
-    "extra": "Committed to building efficient systems, clean architecture, and Linux-based open source ecosystems.",
+    "subtitle": "Backend with Java, Rust and SQL, clean code and sustainable architecture.",
+    "extra": "Driven by continuous learning and collaboration, building solutions that balance performance, simplicity, and maintainability.",
     "cards": {
-      "javaTitle": "Java Junior Dev",
-      "javaDesc": "Backend & Java ecosystem",
+      "javaTitle": "Junior Dev",
+      "javaDesc": "Early-career Junior Dev focused on Java, Rust and SQL backend development. Building hands-on experience while applying engineering best practices to efficient, well-structured solutions.",
       "cleanTitle": "Clean Code & OOP",
-      "cleanDesc": "Object-oriented design",
+      "cleanDesc": "OOP and Clean Code foundation, with UML modeling and experience in agile methodologies to keep code organized, collaborate effectively and deliver in short cycles.",
       "linuxTitle": "Linux & FOSS",
-      "linuxDesc": "Open source & systems"
+      "linuxDesc": "Long-time Linux user with experience across multiple distributions, troubleshooting platform issues and bugs, and extensive FOSS usage."
     }
   },
   "experience": {
@@ -90,6 +91,18 @@
     "more": "More",
     "less": "Less",
     "inspectSubtitle": "GitHub repository inspect"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "eyebrow": "Continuous Learning",
+    "subtitle": "Courses, training programs and completed certifications.",
+    "loading": "Loading certificates...",
+    "error": "Failed to load certificates from GitHub.",
+    "retry": "Try again",
+    "empty": "No certificates found.",
+    "viewRepository": "View repository",
+    "openOriginal": "Open original certificate",
+    "previewError": "Preview unavailable"
   },
   "contributions": {
     "title": "Contributed Projects",

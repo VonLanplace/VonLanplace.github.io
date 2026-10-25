@@ -4,7 +4,9 @@ import type { MouseEvent, TouchEvent } from 'react';
 function isInteractiveTarget(target: EventTarget | null) {
   return (
     target instanceof Element &&
-    target.closest('button, a, input, textarea, select, [role="button"]') !== null
+    target.closest(
+      'button, input, textarea, select, [role="button"], a:not([data-carousel-swipe])'
+    ) !== null
   );
 }
 
@@ -14,6 +16,7 @@ export function useCarousel(totalItems: number, itemsPerPage: number) {
   const [dragOffset, setDragOffset] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const draggingRef = useRef(false);
+  const didSwipeRef = useRef(false);
   const startX = useRef(0);
   const currentX = useRef(0);
 
@@ -38,6 +41,7 @@ export function useCarousel(totalItems: number, itemsPerPage: number) {
 
   const startDrag = (clientX: number) => {
     draggingRef.current = true;
+    didSwipeRef.current = false;
     setIsDragging(true);
     setDragOffset(0);
     startX.current = clientX;
@@ -57,13 +61,22 @@ export function useCarousel(totalItems: number, itemsPerPage: number) {
 
     const diff = startX.current - currentX.current;
     if (Math.abs(diff) > 40) {
+      didSwipeRef.current = true;
       if (diff > 0) next();
       else prev();
     }
     setDragOffset(0);
   };
 
+  const handleClickCapture = (event: MouseEvent) => {
+    if (!didSwipeRef.current) return;
+    didSwipeRef.current = false;
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
   const containerProps = {
+    onClickCapture: handleClickCapture,
     onTouchStart: (event: TouchEvent) => {
       if (isInteractiveTarget(event.target)) return;
       startDrag(event.touches[0].clientX);

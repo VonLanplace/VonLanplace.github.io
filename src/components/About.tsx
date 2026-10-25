@@ -40,7 +40,7 @@ export const About: React.FC = () => {
             {PRINCIPLES.map(({ icon: Icon, titleKey, descKey }) => (
               <Card
                 key={titleKey}
-                className="flex items-start gap-4 p-5 hover:border-ef-accent/50 hover:shadow-md"
+                className="flex items-start gap-4 p-5 hover:border-ef-accent/50"
               >
                 <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent">
                   <Icon className="h-5 w-5" />
@@ -49,7 +49,7 @@ export const About: React.FC = () => {
                   <h3 className="font-semibold text-ef-text">
                     {t.about.cards[titleKey]}
                   </h3>
-                  <p className="mt-0.5 text-sm text-ef-muted">
+                  <p className="mt-1 text-sm leading-relaxed text-ef-muted">
                     {t.about.cards[descKey]}
                   </p>
                 </div>

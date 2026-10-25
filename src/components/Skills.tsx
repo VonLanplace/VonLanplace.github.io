@@ -63,7 +63,7 @@ export const Skills: React.FC = () => {
                   {category.items.map((item) => (
                     <div
                       key={item}
-                      className="group flex items-center gap-2.5 rounded-xl border border-ef-border bg-ef-bg p-3 shadow-xs transition-all hover:border-ef-accent/60 hover:shadow-md"
+                      className="group flex items-center gap-2.5 rounded-xl border border-ef-border bg-ef-bg p-3 shadow-xs transition-all hover:border-ef-accent/60"
                     >
                       <Code2 className="h-4 w-4 shrink-0 text-ef-muted transition-colors group-hover:text-ef-accent" />
                       <span className="truncate text-sm font-medium text-ef-text">

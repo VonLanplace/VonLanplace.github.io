@@ -1,7 +1,6 @@
 # Curriculum & Portfolio Website (`site-curriculo`)
 
 [![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://VonLanplace.github.io)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://react.dev/)
 
@@ -77,7 +76,3 @@ Preview the production build locally:
 ```bash
 npm run preview
 ```
-
-## 📄 License
-
-This project is open-source under the [ISC License](LICENSE).

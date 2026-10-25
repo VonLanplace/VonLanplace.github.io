@@ -25,4 +25,19 @@ export interface GitHubSocialAccount {
   url: string;
 }
 
+export type CertificateKind = 'pdf' | 'image';
+
+export interface CertificateFile {
+  id: string;
+  name: string;
+  title: string;
+  path: string;
+  extension: string;
+  kind: CertificateKind;
+  rawUrl: string;
+  sourceUrl: string;
+  previewUrl?: string;
+  committedAt?: string;
+}
+
 export type Language = 'pt' | 'en';
