@@ -8,6 +8,15 @@ const SOCIAL_CACHE_KEY = 'vonlanplace_github_socials';
 const SOCIAL_CACHE_TIME_KEY = 'vonlanplace_github_socials_time';
 const CACHE_DURATION = 1000 * 60 * 30; // 30 minutes
 
+const EXCLUDED_REPO_NAMES = new Set([
+  'VonLanplace.github.io',
+  'courses-and-certificates',
+]);
+
+function filterExcludedRepos(repos: GitHubRepo[]): GitHubRepo[] {
+  return repos.filter((repo) => !EXCLUDED_REPO_NAMES.has(repo.name));
+}
+
 export async function fetchUserRepos(): Promise<GitHubRepo[]> {
   try {
     const cachedData = localStorage.getItem(CACHE_KEY);
@@ -18,7 +27,9 @@ export async function fetchUserRepos(): Promise<GitHubRepo[]> {
       if (age < CACHE_DURATION) {
         const parsed: GitHubRepo[] = JSON.parse(cachedData);
         // Ensure strict deduplication by ID
-        return Array.from(new Map(parsed.map(r => [r.id, r])).values());
+        return filterExcludedRepos(
+          Array.from(new Map(parsed.map(r => [r.id, r])).values())
+        );
       }
     }
 
@@ -38,7 +49,7 @@ export async function fetchUserRepos(): Promise<GitHubRepo[]> {
     rawRepos.forEach(repo => {
       uniqueReposMap.set(repo.id, repo);
     });
-    const repos = Array.from(uniqueReposMap.values());
+    const repos = filterExcludedRepos(Array.from(uniqueReposMap.values()));
     
     // Sort strictly: repos with non-empty description first, repos without description at the end
     repos.sort((a, b) => {
@@ -58,7 +69,9 @@ export async function fetchUserRepos(): Promise<GitHubRepo[]> {
     const cachedData = localStorage.getItem(CACHE_KEY);
     if (cachedData) {
       const parsed: GitHubRepo[] = JSON.parse(cachedData);
-      return Array.from(new Map(parsed.map(r => [r.id, r])).values());
+      return filterExcludedRepos(
+        Array.from(new Map(parsed.map(r => [r.id, r])).values())
+      );
     }
     throw error;
   }

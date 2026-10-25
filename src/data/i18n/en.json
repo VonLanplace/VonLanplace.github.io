@@ -4,22 +4,52 @@
     "experience": "Experience",
     "skills": "Skills",
     "projects": "Projects",
+    "certificates": "Certificates",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Lucas Sartorelli (VonLanplace) — Java Junior Dev & Software Engineering Student",
+    "title": "Lucas Sartorelli (VonLanplace) — Junior Dev & Software Engineering Student",
     "description": "Studying Systems Analysis and Development at FATEC Zona Leste. Focused on Java, OOP, Clean Code, Linux, and FOSS.",
     "viewProjects": "View GitHub Projects",
     "contactMe": "Contact Me",
-    "viewResume": "Resume"
+    "viewResume": "Resume",
+    "badge": "Java Backend & Systems Engineering",
+    "terminal": {
+      "tabTerminal": "Terminal",
+      "tabStack": "stack.json",
+      "tabStatus": "Status",
+      "whoami": "whoami",
+      "bio": "Java backend developer focused on OOP, Clean Code, Linux and free software.",
+      "focus": "focus",
+      "focusOutput": "Building robust Java systems and open source projects.",
+      "stack": "stack --list",
+      "api": "API Services",
+      "apiStatus": "Operational",
+      "security": "Security Audit",
+      "securityStatus": "Passed",
+      "ready": "Ready for new architectural challenges and impactful projects."
+    }
   },
   "about": {
     "title": "About Me",
-    "content": "I am a junior developer currently studying Systems Analysis and Development at FATEC Zona Leste in São Paulo. Passionate about Java backend development, object-oriented programming (OOP), and Clean Code principles. I am a strong advocate for Linux environments and Free and Open Source Software (FOSS)."
+    "content": "Early-career Junior Developer studying Systems Analysis and Development at FATEC Zona Leste. Focused on backend with Java, Rust and SQL, applying OOP, Clean Code and clean architecture. Experienced with UML modeling and agile methodologies, collaborating in short development cycles and continuous improvement.",
+    "eyebrow": "Profile & Principles",
+    "subtitle": "Backend with Java, Rust and SQL, clean code and sustainable architecture.",
+    "extra": "Driven by continuous learning and collaboration, building solutions that balance performance, simplicity, and maintainability.",
+    "cards": {
+      "javaTitle": "Junior Dev",
+      "javaDesc": "Early-career Junior Dev focused on Java, Rust and SQL backend development. Building hands-on experience while applying engineering best practices to efficient, well-structured solutions.",
+      "cleanTitle": "Clean Code & OOP",
+      "cleanDesc": "OOP and Clean Code foundation, with UML modeling and experience in agile methodologies to keep code organized, collaborate effectively and deliver in short cycles.",
+      "linuxTitle": "Linux & FOSS",
+      "linuxDesc": "Long-time Linux user with experience across multiple distributions, troubleshooting platform issues and bugs, and extensive FOSS usage."
+    }
   },
   "experience": {
     "title": "Education & Experience",
+    "eyebrow": "Career & Timeline",
+    "subtitle": "Academic background and continuous practice in software engineering and backend development.",
     "jobs": [
       {
         "role": "Systems Analysis & Development Student",
@@ -36,32 +66,67 @@
     ]
   },
   "skills": {
-    "title": "Technical Skills"
+    "title": "Technical Skills",
+    "eyebrow": "Stack & Tools",
+    "subtitle": "Technologies dynamically categorized from GitHub repositories and profile.",
+    "count": "skills",
+    "activeStack": "Active stack"
   },
   "projects": {
     "title": "GitHub Projects (VonLanplace)",
     "subtitle": "Public repositories dynamically fetched from the GitHub API",
+    "eyebrow": "Repositories & Open Source",
     "loading": "Loading repositories...",
     "error": "Failed to load GitHub repositories.",
+    "retry": "Try again",
+    "refresh": "Refresh",
     "stars": "Stars",
     "forks": "Forks",
     "noRepos": "No repositories found.",
-    "viewRepo": "View Repository"
+    "viewRepo": "View repository",
+    "details": "Repository details",
+    "close": "Close",
+    "openGithub": "Open on GitHub",
+    "noDescription": "No description provided for this repository.",
+    "more": "More",
+    "less": "Less",
+    "inspectSubtitle": "GitHub repository inspect"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "eyebrow": "Continuous Learning",
+    "subtitle": "Courses, training programs and completed certifications.",
+    "loading": "Loading certificates...",
+    "error": "Failed to load certificates from GitHub.",
+    "retry": "Try again",
+    "empty": "No certificates found.",
+    "viewRepository": "View repository",
+    "openOriginal": "Open original certificate",
+    "previewError": "Preview unavailable"
   },
   "contributions": {
     "title": "Contributed Projects",
     "subtitle": "External repositories and open source collaborations",
+    "eyebrow": "Collaborations & Open Source",
     "noRepos": "No recent external contributions found."
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's build something together or discuss ideas?",
+    "eyebrow": "Let's Talk",
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "resume": "Resume"
+    "resume": "Resume",
+    "website": "Website / Blog"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "status": "online"
+  },
+  "common": {
+    "more": "More",
+    "less": "Less",
+    "close": "Close"
   }
 }

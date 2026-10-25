@@ -1,62 +1,60 @@
 import React from 'react';
+import { Code2, Cpu, Terminal, User } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { User, Code, Cpu, Terminal } from 'lucide-react';
+import { Badge } from './ui/badge';
+import { Card } from './ui/card';
+import { SectionHeader } from './shared/SectionHeader';
+
+const PRINCIPLES = [
+  { icon: Code2, titleKey: 'javaTitle', descKey: 'javaDesc' },
+  { icon: Cpu, titleKey: 'cleanTitle', descKey: 'cleanDesc' },
+  { icon: Terminal, titleKey: 'linuxTitle', descKey: 'linuxDesc' },
+] as const;
 
 export const About: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-[var(--ef-surface)]/40 border-t border-[var(--ef-border)] transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center space-x-3 mb-10">
-          <div className="p-2 rounded-xl bg-[var(--ef-accent)]/10 text-[var(--ef-accent)]">
-            <User className="w-6 h-6" />
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--ef-text)]">{t.about.title}</h2>
-        </div>
+    <section id="about" className="border-t border-ef-border bg-ef-surface/40 py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          icon={<User className="h-3.5 w-3.5" />}
+          eyebrow={t.about.eyebrow}
+          title={t.about.title}
+          subtitle={t.about.subtitle}
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2 bg-[var(--ef-surface)] border border-[var(--ef-border)] p-8 rounded-3xl shadow-sm flex flex-col justify-center">
-            <p className="text-[var(--ef-text)] text-lg leading-relaxed mb-4">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <Card className="p-7 sm:p-9 lg:col-span-7">
+            <Badge variant="tech" className="mb-5">
+              <Terminal className="h-3.5 w-3.5" />
+              <span>cat about.md</span>
+            </Badge>
+            <p className="text-base leading-relaxed text-ef-text sm:text-lg">
               {t.about.content}
             </p>
-            <p className="text-[var(--ef-muted)] leading-relaxed">
-              {language === 'pt' 
-                ? 'Comprometido com a criação de sistemas eficientes, arquitetura limpa e ecossistemas open source baseados em Linux.'
-                : 'Committed to building efficient systems, clean architecture, and Linux-based open source ecosystems.'}
-            </p>
-          </div>
+            <p className="mt-4 leading-relaxed text-ef-muted">{t.about.extra}</p>
+          </Card>
 
-          <div className="space-y-4">
-            <div className="bg-[var(--ef-surface)] border border-[var(--ef-border)] p-5 rounded-2xl flex items-start space-x-4 shadow-sm">
-              <div className="p-2.5 rounded-xl bg-[var(--ef-accent)]/10 text-[var(--ef-accent)]">
-                <Code className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-[var(--ef-text)]">Java Junior Dev</h3>
-                <p className="text-sm text-[var(--ef-muted)]">Backend & Java Ecosystem</p>
-              </div>
-            </div>
-
-            <div className="bg-[var(--ef-surface)] border border-[var(--ef-border)] p-5 rounded-2xl flex items-start space-x-4 shadow-sm">
-              <div className="p-2.5 rounded-xl bg-[var(--ef-accent)]/10 text-[var(--ef-accent)]">
-                <Cpu className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-[var(--ef-text)]">Clean Code & OOP</h3>
-                <p className="text-sm text-[var(--ef-muted)]">Object-Oriented Design</p>
-              </div>
-            </div>
-
-            <div className="bg-[var(--ef-surface)] border border-[var(--ef-border)] p-5 rounded-2xl flex items-start space-x-4 shadow-sm">
-              <div className="p-2.5 rounded-xl bg-[var(--ef-accent)]/10 text-[var(--ef-accent)]">
-                <Terminal className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-[var(--ef-text)]">Linux & FOSS</h3>
-                <p className="text-sm text-[var(--ef-muted)]">Open Source & Systems</p>
-              </div>
-            </div>
+          <div className="flex flex-col gap-4 lg:col-span-5">
+            {PRINCIPLES.map(({ icon: Icon, titleKey, descKey }) => (
+              <Card
+                key={titleKey}
+                className="flex items-start gap-4 p-5 hover:border-ef-accent/50"
+              >
+                <span className="rounded-xl border border-ef-accent/20 bg-ef-accent/10 p-2.5 text-ef-accent-text">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="font-semibold text-ef-text">
+                    {t.about.cards[titleKey]}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-ef-muted">
+                    {t.about.cards[descKey]}
+                  </p>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

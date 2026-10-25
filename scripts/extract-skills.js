@@ -5,6 +5,14 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const GITHUB_HEADERS = {
+  Accept: 'application/vnd.github+json',
+  'User-Agent': 'site-curriculo-build',
+  ...(process.env.GITHUB_TOKEN
+    ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
+    : {}),
+};
+
 const CATEGORY_MAP = {
   backend: ['Java', 'TypeScript', 'JavaScript', 'Python', 'C#', 'C++', 'Go', 'Rust', 'PHP', 'Ruby'],
   databases: ['Microsoft SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'Redis', 'Oracle'],
@@ -25,7 +33,10 @@ function classifySkill(skill) {
 async function extractSkills() {
   console.log('Fetching repositories for VonLanplace...');
   try {
-    const response = await fetch('https://api.github.com/users/VonLanplace/repos?per_page=100');
+    const response = await fetch(
+      'https://api.github.com/users/VonLanplace/repos?per_page=100',
+      { headers: GITHUB_HEADERS }
+    );
     if (!response.ok) {
       throw new Error(`GitHub API returned status ${response.status}`);
     }
@@ -79,8 +90,10 @@ async function extractSkills() {
     fs.writeFileSync(outputPath, JSON.stringify(skillsData, null, 2), 'utf-8');
     console.log('Successfully updated src/data/skills.json with categorized skills!');
   } catch (error) {
-    console.error('Failed to extract skills:', error);
-    process.exit(1);
+    console.warn(
+      'Failed to extract skills; keeping committed data:',
+      error instanceof Error ? error.message : error
+    );
   }
 }
 
